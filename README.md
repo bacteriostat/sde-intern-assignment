@@ -12,8 +12,8 @@ Features:
     • Once the data is captured, it is stored in the backend.
     • Visitor details are sent to host via SMS and email.
     • On check-out, the details of the meeting are emailed to the visitor.
-	(Email and SMS functionality doesn’t work because it needs premium services. The 	mock API call has been indicated in code)
-
+	    (Email and SMS functionality doesn’t work because it needs premium services. 
+      The mock API call has been indicated in code)
     • Check-in time and check-out time are  automatically captured and are not required for input.
 
 Technologies Used:
