@@ -1,0 +1,12 @@
+<div *ngIf="items?.length > 0;else noItems">
+    <ul *ngFor="let item of items" class="collection">
+        <li class="collection-item"><strong>{{item.name}}: </strong>{{item.status}} 
+            <button *ngIf="item.status == &quot;Checked In&quot;"  (click)="updateItem($event, item)" class="btn red">Check out</button>
+        </li>
+    </ul>
+</div>
+
+<ng-template #noItems>
+    <hr>
+    <h5>There are no items!</h5>
+</ng-template>

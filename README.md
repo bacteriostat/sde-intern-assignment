@@ -1,27 +1,35 @@
-# FirebaseServiceApp
+﻿Entry Management Software – SDE intern assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+An angular web app designed to manage entry in an office.
 
-## Development server
+Approach:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I have assumed that the software will be used at the reception. Web interface is comfortable and versatile for use from reception standpoint. The web interface has a form at the top for quick access and a list of all visitors who have previously checked-in is displayed. The members that have not checked in is displayed with a check-out button. 
 
-## Code scaffolding
+Features:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    • Captures the name, email address, phone no of the visitor and same information is captured for the host.
+    • Once the data is captured, it is stored in the backend.
+    • Visitor details are sent to host via SMS and email.
+    • On check-out, the details of the meeting are emailed to the visitor.
+	(Email and SMS functionality doesn’t work because it needs premium services. The 	mock API call has been indicated in code)
 
-## Build
+    • Check-in time and check-out time are  automatically captured and are not required for input.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Technologies Used:
 
-## Running unit tests
+Angular Framework, Firebase Firestore
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Supported Platforms:
 
-## Running end-to-end tests
+It should work on all web browsers.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+How to run?
 
-## Further help
+    • Firebase projects needs to be linked with the app to get the API key.
+    • The obtained API key and other details need to be updated in environment.ts file
+    • Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+How does it work?
+
+The visitor and host details are stored in the firebase firestore NoSQL database. The check-in time is not shown as field and is captured using the system time. As the details is pushed to the database, the list is automatically updated with a check-out button. When the check-out button is pressed the time is automatically captured and pushed to the database. Mock API calls for SMS and email have been indicated and they are needed to be implemented.
